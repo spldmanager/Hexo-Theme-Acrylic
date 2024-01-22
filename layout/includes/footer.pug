@@ -80,3 +80,10 @@ if theme.footer.bar.enable
       i.heofont.icon-arrow-right-circle-fill
 #quit-box(onclick='RemoveRewardMask()',style="display: none")
 .comment-barrage
+if theme.mermaid.enable == true
+  script(type='text/javascript', id='maid-script' mermaidoptioins=theme.mermaid.options src='https://unpkg.com/mermaid@'+ '9.4.0' + '/dist/mermaid.min.js' + '?v=' + theme.version)
+  script.
+    if (window.mermaid) {
+      var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
+      mermaid.initialize(options);
+    }
