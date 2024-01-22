@@ -566,7 +566,7 @@ fancybox: true
 
 # 标签外挂 (mermaid)
 mermaid:
-  enable: false
+  enable: true
   # 主题: default/forest/dark/neutral
   theme:
     light: default
